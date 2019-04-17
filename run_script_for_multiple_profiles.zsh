@@ -9,7 +9,7 @@ TABLE_NAME="aws_instances"
 PREVIOUS_PROFILE=$AWS_PROFILE
 for aws_profile in "${profiles[@]}"
 do
-   echo -e "\nSaving AWS EC2 Instances in aws profile:'$aws_profile'..."
+   echo -e "\nSaving AWS EC2 Instances from aws profile:'$aws_profile'..."
    export AWS_PROFILE=$aws_profile
    zsh aws_ec2_instances_from_all_regions_to_db.zsh $DATABASE $TABLE_NAME
 done
