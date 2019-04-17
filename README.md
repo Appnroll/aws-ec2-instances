@@ -13,15 +13,18 @@ I liked the idea that no ruby or node backend is needed, so the dependencies are
 
 which you usually have installed anyway on your local environment.
 
-### Preconditions
+### Prerequisites
 We need at least PostgreSQL 9.5 as it supports `upsert` that is update on conflict. Commands `createdb` and `psql` come with it (not tested on Ubuntu, maybe it needs extension here).
+
+#### install postgreSQL on Mac
+`brew install postgresql`
 
 The script assumes you have configured the AWS CLI
 https://aws.amazon.com/cli/
 
 You need to have `jq` installed
 
-#### For jq on Mac
+#### install jq on Mac
 `brew install jq`
 
 ### Usage
@@ -48,7 +51,7 @@ The naming of course you can change directly in `sql/aws_instances.sql`
 
 `zsh run_script_for_multiple_profiles.zsh`
 
-### Troubleshooting
+## Troubleshooting
 
 you may get `Failed to parse JSON, or got false/null`
 This means you probably don't have `jq` installed.
