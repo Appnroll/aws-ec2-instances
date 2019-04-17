@@ -46,6 +46,7 @@ The naming of course you can change directly in `sql/aws_instances.sql`
 
 4) Bonus step! If all works fine you can repeat with multiple environments.
 
+`zsh run_script_for_multiple_profiles.zsh`
 
 ### Troubleshooting
 
