@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ## these array contains profiles defined in .aws/config and .aws/credentials
-declare -a profiles=("profile_1", "profile_2")
+declare -a profiles=("profile_1" "profile_2")
 
 DATABASE="aws_ec2"
 TABLE_NAME="aws_instances"
