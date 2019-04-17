@@ -1,6 +1,6 @@
 ## aws_ec2_instances_from_all_regions_to_db
 
-This script lists all AWS instances in all regions and saves to PostgreSQL database.
+This script lists all AWS instances in all regions and saves to PostgreSQL database. Tested that works not only on `zsh` but also on `sh`.
 
 ### Preconditions
 We need at least PostgreSQL 9.5 as it supports upsert so update on conflict.
@@ -38,6 +38,19 @@ which you usually have installed anyway on your local environment.
 before you need to create aws_ec2 database in postgres
 with table `aws_instances` and fields as $SAVED_FIELDS
 
+### Troubleshooting
+
+you may get `Failed to parse JSON, or got false/null`
+This means you probably don't have `jq` installed.
+
+
+## run_script_for_multiple_profiles
+Here is a script if you need to fetch the data from
+multiple profiles. Just pass the names of your profiles to the `profiles`
+array in the `run_script_for_multiple_profiles.zsh`
+
+You can have an example config like this:
+
 #### example ~/.aws/config
 ```
 [profile profile_1]
@@ -59,12 +72,6 @@ aws_secret_access_key = YOUR_PROFILE_1_SECRET_ACCESS_KEY_HERE
 aws_access_key_id = YOUR_PROFILE_2_KEY_HERE
 aws_secret_access_key = YOUR_PROFILE_2_SECRET_ACCESS_KEY_HERE
 ```
-
-
-### Troubleshooting
-
-you may get `Failed to parse JSON, or got false/null`
-This means you probably don't have `jq` installed.
 
 
 Resources:
