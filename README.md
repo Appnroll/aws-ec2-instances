@@ -1,4 +1,6 @@
-## aws_ec2_instances_from_all_regions_to_db
+# AWS EC2 Instances
+
+`aws_ec2_instances_from_all_regions_to_db.zsh`
 
 This script lists all AWS instances in all regions and saves to PostgreSQL database. Tested that works not only on `zsh` but also on `sh`.
 
@@ -59,10 +61,14 @@ you may get `Failed to parse JSON, or got false/null`
 This means you probably don't have `jq` installed.
 
 
-## run_script_for_multiple_profiles
+## Multiple profiles
 
 Here is a script if you need to fetch the data from
-multiple profiles. Just pass the names of your AWS profiles to the `profiles`
+multiple profiles. 
+
+`zsh run_script_for_multiple_profiles.zsh`
+
+Just pass the names of your AWS profiles to the `profiles`
 array in the `run_script_for_multiple_profiles.zsh` in line 4.
 
 You can have an example config like this:
