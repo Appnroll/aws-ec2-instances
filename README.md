@@ -5,6 +5,8 @@ This script lists all AWS instances in all regions and saves to PostgreSQL datab
 this script was an experiment to save data from AWS-CLI using pure bash scripts. 
 I liked the idea that no ruby or node backend is needed, so the dependencies are limited to:
 
+http://d1xu7knqe2z7f9.cloudfront.net/appnroll/all-ec2-instances.gif
+
 `aws-cli`
 
 `jq`
