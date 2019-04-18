@@ -1,10 +1,12 @@
 # AWS EC2 Instances
-
+<img src="https://d1xu7knqe2z7f9.cloudfront.net/appnroll/appnroll-192x192.png" align="right"
+     title="Size Limit logo by Anton Lovchikov" width="120" height="120">
+     
 `aws_ec2_instances_from_all_regions_to_db.zsh`
 
 This script lists all AWS instances in all regions and saves to PostgreSQL database. Tested that works not only on `zsh` but also on `sh`.
 
-![](http://d1xu7knqe2z7f9.cloudfront.net/appnroll/all-ec2-instances.gif)
+![](https://d1xu7knqe2z7f9.cloudfront.net/appnroll/all-ec2-instances.gif)
 
 this script was an experiment to save data from AWS-CLI using pure bash scripts. 
 I liked the idea that no ruby or node backend is needed, so the dependencies are limited to:
