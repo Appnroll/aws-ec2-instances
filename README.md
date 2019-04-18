@@ -95,8 +95,19 @@ aws_access_key_id = YOUR_PROFILE_2_KEY_HERE
 aws_secret_access_key = YOUR_PROFILE_2_SECRET_ACCESS_KEY_HERE
 ```
 
+## Contributing
 
-Resources:
+You are welcome to add issues and create pull requests.
+The script may need some extensions for sure, that is different databases, only terminal output, 
+html, csv and maybe also a version that supports connection strings. 
+That's a short wishlist!
+
+## License
+
+The code in this project is licensed under MIT license.
+
+## Links
+
 * https://starkandwayne.com/blog/bash-for-loop-over-json-array-using-jq/
 * https://stedolan.github.io/jq/tutorial/
 * https://medium.com/cameron-nokes/working-with-json-in-bash-using-jq-13d76d307c4
