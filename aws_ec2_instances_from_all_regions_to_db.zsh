@@ -19,8 +19,8 @@ fi
 
 
 SAVED_FIELDS="state, name, type, instance_id, public_ip, launch_time, region, profile, publicdnsname"
-
-REGIONS_WITH_INSTANCES="" # collects the regions to display them in the end of script
+# collects the regions to display them in the end of script
+REGIONS_WITH_INSTANCES=""
 
 for region in `aws ec2 describe-regions --output text | cut -f3`
 do
@@ -39,7 +39,6 @@ do
      echo -e "\nListing AWS EC2 Instances in region:'$region'..."
      JSON=".Reservations[] | ( .Instances[] | $INSTANCE_ATTRIBUTES)"
      INSTANCE_JSON=$(aws ec2 describe-instances --region $region)
-     # INSTANCE_JSON=$(aws ec2 describe-instances --region eu-west-1)
 
      if echo $INSTANCE_JSON | jq empty; then
 
