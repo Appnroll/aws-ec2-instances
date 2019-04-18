@@ -29,31 +29,36 @@ https://aws.amazon.com/cli/
 You need to have `jq` installed
 
 #### install jq on Mac
-`brew install jq`
-
+```shell
+brew install jq
+```
 ### Usage
 
 0) make sure you have the preconditions
 
 1) first create the database:
-
-`createdb aws_ec2`
+```shell
+createdb aws_ec2
+```
 
 2) then create the table from the script in sql folder:
-
-`psql aws_ec2 -f sql/aws_instances.sql`
+```shell
+psql aws_ec2 -f sql/aws_instances.sql
+```
 
 before you need to run it to create `aws_ec2` database in postgres
 with table `aws_instances` and fields as in the variable $SAVED_FIELDS.
 The naming of course you can change directly in `sql/aws_instances.sql`
 
 3) then run the script:
-
-`zsh aws_ec2_instances_from_all_regions_to_db.zsh $DATABASE $TABLE_NAME`
+```shell
+zsh aws_ec2_instances_from_all_regions_to_db.zsh $DATABASE $TABLE_NAME
+```
 
 4) Bonus step! If all works fine you can repeat with multiple environments.
-
-`zsh run_script_for_multiple_profiles.zsh`
+```shell
+zsh run_script_for_multiple_profiles.zsh
+```
 
 ## Troubleshooting
 
@@ -65,8 +70,9 @@ This means you probably don't have `jq` installed.
 
 Here is a script if you need to fetch the data from
 multiple profiles. 
-
-`zsh run_script_for_multiple_profiles.zsh`
+```shell
+zsh run_script_for_multiple_profiles.zsh
+```
 
 Just pass the names of your AWS profiles to the `profiles`
 array in the `run_script_for_multiple_profiles.zsh` in line 4.
