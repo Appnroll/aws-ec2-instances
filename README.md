@@ -1,6 +1,6 @@
 # AWS EC2 Instances
 <img src="https://d1xu7knqe2z7f9.cloudfront.net/appnroll/appnroll-192x192.png" align="right"
-     title="Size Limit logo by Anton Lovchikov" width="120" height="120">
+     title="Size Limit logo by Anton Lovchikov" width="80" height="80">
      
 `aws_ec2_instances_from_all_regions_to_db.zsh`
 
