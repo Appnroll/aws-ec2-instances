@@ -24,7 +24,8 @@ I liked the idea that no ruby or node backend is needed, so the dependencies are
 which you usually have installed anyway on your local environment.
 
 ### Prerequisites
-We need at least PostgreSQL 9.5 as it supports `upsert` that is update on conflict. Commands `createdb` and `psql` come with it (not tested on Ubuntu, maybe it needs extension here).
+
+* We need at least PostgreSQL 9.5 as it supports `upsert` that is update on conflict. Commands `createdb` and `psql` come with it (not tested on Ubuntu, maybe it needs extension here).
 
 to install postgreSQL on Mac
 
@@ -52,7 +53,18 @@ brew install jq
 ```
 ### Usage
 
-0) make sure you have the preconditions
+0) make sure you have the preconditions above, then
+
+* clone the repo:
+
+```shell
+git clone git@github.com:Appnroll/aws-ec2-instances.git
+```
+* enter the repo:
+
+```shell
+cd aws-ec2-instances
+```
 
 1) first create the database:
 ```shell
@@ -74,9 +86,15 @@ zsh aws_ec2_instances_from_all_regions_to_db.zsh $DATABASE $TABLE_NAME
 ```
 
 4) Bonus step! If all works fine you can repeat with multiple environments.
+
+expect it to open a csv file with all the instances recorded to the database
+with the default program.
+
 ```shell
 zsh run_script_for_multiple_profiles.zsh
 ```
+you can rerun this script for all future for updates
+
 
 ## Troubleshooting
 
