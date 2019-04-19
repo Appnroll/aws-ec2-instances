@@ -4,18 +4,22 @@
      
 `aws_ec2_instances_from_all_regions_to_db.zsh`
 
-This script lists all AWS instances in all regions and saves to PostgreSQL database. Tested that works not only on `zsh` but also on `sh`.
+This script lists all AWS instances in all regions and saves to PostgreSQL database. 
+Fast and neat way to audit you AWS EC2 instances!
+Tested that works not only on `zsh` but also on `sh`.
 
 ![](https://d1xu7knqe2z7f9.cloudfront.net/appnroll/all-ec2-instances.gif)
 
 this script was an experiment to save data from AWS-CLI using pure bash scripts. 
 I liked the idea that no ruby or node backend is needed, so the dependencies are limited to:
 
-`aws-cli`
+`aws-cli` - Universal Command Line Interface for Amazon Web Services https://github.com/aws/aws-cli
 
-`jq`
+`jq` - a Command-line JSON processor https://github.com/stedolan/jq
 
-`psql`
+`psql` - Command Line tool that comes together with `postgresql`
+
+`createdb` - Command Line tool that also comes together with `postgresql` :-)
 
 which you usually have installed anyway on your local environment.
 
@@ -31,6 +35,7 @@ https://aws.amazon.com/cli/
 You need to have `jq` installed
 
 #### install jq on Mac
+jq
 ```shell
 brew install jq
 ```
