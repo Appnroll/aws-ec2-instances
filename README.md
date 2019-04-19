@@ -105,13 +105,22 @@ This means you probably don't have `jq` installed.
 ## Multiple profiles
 
 Here is a script if you need to fetch the data from
-multiple profiles. 
+multiple profiles. Before you run it:
+Just pass the names of your AWS profiles you can find in
+`~/.aws/config`
+
+to the `profiles` variable bash array in the 
+`run_script_for_multiple_profiles.zsh` in line 4.
+Careful - no commas in the array! It should look like this:
+```shell
+profiles=("default" "appnroll")
+```
+
+then you can run
+
 ```shell
 zsh run_script_for_multiple_profiles.zsh
 ```
-
-Just pass the names of your AWS profiles to the `profiles`
-array in the `run_script_for_multiple_profiles.zsh` in line 4.
 
 You can have an example config like this:
 
