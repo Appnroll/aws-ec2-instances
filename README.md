@@ -26,18 +26,29 @@ which you usually have installed anyway on your local environment.
 ### Prerequisites
 We need at least PostgreSQL 9.5 as it supports `upsert` that is update on conflict. Commands `createdb` and `psql` come with it (not tested on Ubuntu, maybe it needs extension here).
 
-#### install postgreSQL on Mac
-`brew install postgresql`
+to install postgreSQL on Mac
 
-The script assumes you have configured the AWS CLI
+```shell
+brew install postgresql
+```
+
+* The script assumes you have configured the AWS CLI
 https://aws.amazon.com/cli/
 
-You need to have `jq` installed
 
-#### install jq on Mac
-jq
+```shell
+brew install awscli
+```
+
+
+* For the script to work you need have `jq` installed as we need the json output of aws-cli to be parsed
+
+
+to install jq on Mac
+
 ```shell
 brew install jq
+
 ```
 ### Usage
 
