@@ -58,7 +58,7 @@ brew install jq
 * clone the repo:
 
 ```shell
-git clone git@github.com:Appnroll/aws-ec2-instances.git
+git clone https://github.com/Appnroll/aws-ec2-instances.git
 ```
 * enter the repo:
 
