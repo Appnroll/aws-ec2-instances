@@ -1,0 +1,82 @@
+{
+    "DBInstances": [
+        {
+            "PubliclyAccessible": true,
+            "MasterUsername": "postgres",
+            "LicenseModel": "postgresql-license",
+            "VpcSecurityGroups": [
+                {
+                    "Status": "active",
+                    "VpcSecurityGroupId": "sg-024242424242424242"
+                }
+            ],
+            "InstanceCreateTime": "2018-11-11T08:11:11.233Z",
+            "OptionGroupMemberships": [
+                {
+                    "Status": "in-sync",
+                    "OptionGroupName": "default:postgres-10"
+                }
+            ],
+            "PendingModifiedValues": {},
+            "Engine": "postgres",
+            "MultiAZ": false,
+            "LatestRestorableTime": "2019-04-22T11:11:11Z",
+            "DBSecurityGroups": [],
+            "DBParameterGroups": [
+                {
+                    "DBParameterGroupName": "default.postgres10",
+                    "ParameterApplyStatus": "in-sync"
+                }
+            ],
+            "AutoMinorVersionUpgrade": true,
+            "PreferredBackupWindow": "03:01-03:31",
+            "DBSubnetGroup": {
+                "Subnets": [
+                    {
+                        "SubnetStatus": "Active",
+                        "SubnetIdentifier": "subnet-42424242",
+                        "SubnetAvailabilityZone": {
+                            "Name": "us-east-2b"
+                        }
+                    },
+                    {
+                        "SubnetStatus": "Active",
+                        "SubnetIdentifier": "subnet-66666666",
+                        "SubnetAvailabilityZone": {
+                            "Name": "us-east-2a"
+                        }
+                    },
+                    {
+                        "SubnetStatus": "Active",
+                        "SubnetIdentifier": "subnet-99999999",
+                        "SubnetAvailabilityZone": {
+                            "Name": "us-east-2c"
+                        }
+                    }
+                ],
+                "DBSubnetGroupName": "default",
+                "VpcId": "vpc-aaaa4242",
+                "DBSubnetGroupDescription": "default",
+                "SubnetGroupStatus": "Complete"
+            },
+            "ReadReplicaDBInstanceIdentifiers": [],
+            "AllocatedStorage": 20,
+            "BackupRetentionPeriod": 7,
+            "DBName": "db_name_one",
+            "PreferredMaintenanceWindow": "mon:07:38-mon:08:08",
+            "Endpoint": {
+                "Port": 5432,
+                "Address": "db-name-one.426426426426.us-east-2.rds.amazonaws.com"
+            },
+            "DBInstanceStatus": "available",
+            "EngineVersion": "10.6",
+            "AvailabilityZone": "us-east-2a",
+            "StorageType": "gp2",
+            "DbiResourceId": "db-42642642642642642642642642",
+            "CACertificateIdentifier": "rds-ca-2015",
+            "StorageEncrypted": false,
+            "DBInstanceClass": "db.t2.micro",
+            "DBInstanceIdentifier": "db-one"
+        }
+    ]
+}
