@@ -14,7 +14,7 @@
             "OptionGroupMemberships": [
                 {
                     "Status": "in-sync",
-                    "OptionGroupName": "default:postgres-10"
+                    "OptionGroupName": "default:postgres"
                 }
             ],
             "PendingModifiedValues": {},
@@ -24,7 +24,7 @@
             "DBSecurityGroups": [],
             "DBParameterGroups": [
                 {
-                    "DBParameterGroupName": "default.postgres10",
+                    "DBParameterGroupName": "default.postgres",
                     "ParameterApplyStatus": "in-sync"
                 }
             ],

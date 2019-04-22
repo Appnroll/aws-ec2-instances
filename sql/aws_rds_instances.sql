@@ -26,11 +26,13 @@ CREATE TABLE public.aws_rds (
     id serial PRIMARY KEY,
     dbi_resource_id VARCHAR (32) UNIQUE,
     instance_class VARCHAR (32),
-    identifier VARCHAR (32)
+    identifier VARCHAR (32),
+    region VARCHAR (32),
+    profile VARCHAR (32)
 );
 
 
-COPY public.aws_rds (dbi_resource_id, instance_class, identifier) FROM stdin;
+COPY public.aws_rds (dbi_resource_id, instance_class, identifier, region, profile) FROM stdin;
 \.
 
 --

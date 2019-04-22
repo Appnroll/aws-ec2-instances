@@ -18,7 +18,7 @@ if [ -z "$2" ]
 fi
 
 
-SAVED_FIELDS="dbi_resource_id, identifier, instance_class"
+SAVED_FIELDS="dbi_resource_id, identifier, instance_class, region, profile"
 # collects the regions to display them in the end of script
 REGIONS_WITH_INSTANCES=""
 
@@ -29,7 +29,9 @@ do
      INSTANCE_ATTRIBUTES="{
        identifier: .DBInstanceIdentifier,
        dbi_resource_id: .DbiResourceId,
-       instance_class: .DBInstanceClass
+       instance_class: .DBInstanceClass,
+       \"region\": \"$region\",
+       \"profile\": \"$AWS_PROFILE\"
      }"
 
 
@@ -50,7 +52,9 @@ do
                 DO UPDATE
                 SET identifier = EXCLUDED.identifier,
                 instance_class = EXCLUDED.instance_class,
-                dbi_resource_id = EXCLUDED.dbi_resource_id
+                dbi_resource_id = EXCLUDED.dbi_resource_id,
+                region = EXCLUDED.region,
+                profile = EXCLUDED.profile
                 " -d $DATABASE
             done
 
