@@ -4,6 +4,8 @@
 
 -- Dumped from database version 11.1
 -- Dumped by pg_dump version 11.1
+-- run:
+-- psql aws_instances -f sql/aws_ec2_instances.sql
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -20,7 +22,7 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 
-CREATE TABLE public.aws_instances (
+CREATE TABLE public.aws_ec2 (
     id serial PRIMARY KEY,
     instance_id VARCHAR (32) UNIQUE,
     state VARCHAR (32),
@@ -34,7 +36,7 @@ CREATE TABLE public.aws_instances (
 );
 
 
-COPY public.aws_instances (state, name, type, instance_id, public_ip, region, profile, launch_time, publicdnsname) FROM stdin;
+COPY public.aws_ec2 (state, name, type, instance_id, public_ip, region, profile, launch_time, publicdnsname) FROM stdin;
 \.
 
 --

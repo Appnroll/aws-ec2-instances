@@ -3,8 +3,8 @@
 ## these array contains profiles defined in .aws/config and .aws/credentials
 declare -a profiles=("default" "appnroll")
 
-DATABASE="aws_ec2"
-TABLE_NAME="aws_instances"
+DATABASE="aws_instances"
+TABLE_NAME="aws_ec2"
 
 PREVIOUS_PROFILE=$AWS_PROFILE
 for aws_profile in "${profiles[@]}"

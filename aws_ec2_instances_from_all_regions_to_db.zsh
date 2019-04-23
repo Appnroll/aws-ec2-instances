@@ -1,20 +1,20 @@
 #!/bin/bash
 
-# first argument $1 "aws_ec2"
+# first argument $1 "aws_instances"
 DATABASE=$1
-# second argument $2, "aws_instances"
+# second argument $2, "aws_ec2"
 TABLE_NAME=$2
 
 if [ -z "$1" ]
   then
-    echo "No DATABASE supplied in first argument, will be aws_ec2"
-    DATABASE="aws_ec2"
+    echo "No DATABASE supplied in first argument, will be aws_instances"
+    DATABASE="aws_instances"
 fi
 
 if [ -z "$2" ]
   then
-    echo "No TABLE_NAME supplied in second argument, will be aws_instances"
-    TABLE_NAME="aws_instances"
+    echo "No TABLE_NAME supplied in second argument, will be aws_ec2"
+    TABLE_NAME="aws_ec2"
 fi
 
 
