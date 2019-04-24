@@ -118,8 +118,9 @@ zsh aws_ec2_instances_from_all_regions_to_db.zsh $DATABASE $TABLE_NAME
 
 5) Bonus step! If all works fine you can repeat with multiple environments.
 
-expect it to open a csv file with all the instances recorded to the database
-with the default program.
+the csv file with all the instances saved in the database
+will be in your home directory: `$HOME/$TABLE_NAME.csv`
+.
 
 ```shell
 zsh ec2_instances_in_multiple_profiles.zsh
