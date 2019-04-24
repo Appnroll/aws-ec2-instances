@@ -131,7 +131,15 @@ you can rerun this script for all future for updates
 
 1. You may get `Failed to parse JSON, or got false/null`
 This means you probably don't have `jq` installed.
-
+2. You may get on Ubuntu:
+```bash
+ERROR:  could not open file "/home/USER_NAME/aws_instances.csv" for writing: Permission denied
+```
+This means that your home directory doesnt have correct rights assign to it. You can fix it by typing into terminal:
+```bash
+cd
+chmod 777 USER_NAME/
+```
 
 ## Multiple profiles
 
