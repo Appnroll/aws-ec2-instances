@@ -1,0 +1,114 @@
+{
+    "Reservations": [
+        {
+            "OwnerId": "4264264264264264",
+            "ReservationId": "r-aaaaaaaaaaaaaaa42",
+            "Groups": [],
+            "Instances": [
+                {
+                    "Monitoring": {
+                        "State": "disabled"
+                    },
+                    "PublicDnsName": "ec2-42-42-42-42.us-east-2.compute.amazonaws.com",
+                    "State": {
+                        "Code": 16,
+                        "Name": "running"
+                    },
+                    "EbsOptimized": false,
+                    "LaunchTime": "2018-11-11T11:11:11.000Z",
+                    "PublicIpAddress": "42.42.42.42",
+                    "PrivateIpAddress": "192.168.42.42",
+                    "ProductCodes": [],
+                    "VpcId": "vpc-0a0b420c",
+                    "StateTransitionReason": "",
+                    "InstanceId": "i-aaaabbbbcccc00042",
+                    "ImageId": "ami-aabbcc42",
+                    "PrivateDnsName": "ip-192-42-42-42.us-east-2.compute.internal",
+                    "KeyName": "arch-ci-mudita",
+                    "SecurityGroups": [
+                        {
+                            "GroupName": "launch-wizard-42",
+                            "GroupId": "sg-42424242"
+                        }
+                    ],
+                    "ClientToken": "",
+                    "SubnetId": "subnet-aa424242",
+                    "InstanceType": "t2.micro",
+                    "NetworkInterfaces": [
+                        {
+                            "Status": "in-use",
+                            "MacAddress": "0a:0b:42:0c:0d:42",
+                            "SourceDestCheck": true,
+                            "VpcId": "vpc-0a0b420c",
+                            "Description": "",
+                            "Association": {
+                                "PublicIp": "42.42.42.42",
+                                "PublicDnsName": "ec2-42-42-42-42.us-east-2.compute.amazonaws.com",
+                                "IpOwnerId": "amazon"
+                            },
+                            "NetworkInterfaceId": "eni-aaaabb42",
+                            "PrivateIpAddresses": [
+                                {
+                                    "PrivateDnsName": "ip-192-168-42-42.us-east-2.compute.internal",
+                                    "Association": {
+                                        "PublicIp": "42.42.42.42",
+                                        "PublicDnsName": "ec2-42-42-42-42.us-east-2.compute.amazonaws.com",
+                                        "IpOwnerId": "amazon"
+                                    },
+                                    "Primary": true,
+                                    "PrivateIpAddress": "192.168.42.42"
+                                }
+                            ],
+                            "PrivateDnsName": "ip-192-168-42-42.us-east-2.compute.internal",
+                            "Attachment": {
+                                "Status": "attached",
+                                "DeviceIndex": 0,
+                                "DeleteOnTermination": true,
+                                "AttachmentId": "eni-attach-aaaabb42",
+                                "AttachTime": "2018-11-11T11:11:11.000Z"
+                            },
+                            "Groups": [
+                                {
+                                    "GroupName": "launch-wizard-42",
+                                    "GroupId": "sg-aaaabb42"
+                                }
+                            ],
+                            "SubnetId": "subnet-aa9453e7",
+                            "OwnerId": "424242424242",
+                            "PrivateIpAddress": "192.168.42.42"
+                        }
+                    ],
+                    "SourceDestCheck": true,
+                    "Placement": {
+                        "Tenancy": "default",
+                        "GroupName": "",
+                        "AvailabilityZone": "us-east-2c"
+                    },
+                    "Hypervisor": "xen",
+                    "BlockDeviceMappings": [
+                        {
+                            "DeviceName": "/dev/sda1",
+                            "Ebs": {
+                                "Status": "attached",
+                                "DeleteOnTermination": true,
+                                "VolumeId": "vol-0a0b0c0d0e0f00042",
+                                "AttachTime": "2018-11-11T11:11:11.000Z"
+                            }
+                        }
+                    ],
+                    "Architecture": "x86_64",
+                    "RootDeviceType": "ebs",
+                    "RootDeviceName": "/dev/sda1",
+                    "VirtualizationType": "hvm",
+                    "Tags": [
+                        {
+                            "Value": "aws-default",
+                            "Key": "Name"
+                        }
+                    ],
+                    "AmiLaunchIndex": 0
+                }
+            ]
+        }
+    ]
+}

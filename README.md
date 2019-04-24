@@ -68,17 +68,17 @@ cd aws-ec2-instances
 
 1) first create the database:
 ```shell
-createdb aws_ec2
+createdb aws_instances
 ```
 
 2) then create the table from the script in sql folder:
 ```shell
-psql aws_ec2 -f sql/aws_instances.sql
+psql aws_instances -f sql/aws_ec2_instances.sql
 ```
 
-before you need to run it to create `aws_ec2` database in postgres
-with table `aws_instances` and fields as in the variable $SAVED_FIELDS.
-The naming of course you can change directly in `sql/aws_instances.sql`
+before you need to run it to create `aws_instances` database in postgres
+with table `aws_ec2` and fields as in the variable $SAVED_FIELDS.
+The naming of course you can change directly in `sql/aws_ec2_instances.sql`
 
 3) then run the script:
 ```shell
@@ -91,7 +91,7 @@ expect it to open a csv file with all the instances recorded to the database
 with the default program.
 
 ```shell
-zsh run_script_for_multiple_profiles.zsh
+zsh ec2_instances_in_multiple_profiles.zsh
 ```
 you can rerun this script for all future for updates
 
@@ -110,7 +110,7 @@ Just pass the names of your AWS profiles you can find in
 `~/.aws/config`
 
 to the `profiles` variable bash array in the 
-`run_script_for_multiple_profiles.zsh` in line 4.
+`ec2_instances_in_multiple_profiles.zsh` in line 4.
 Careful - no commas in the array! It should look like this:
 ```shell
 profiles=("default" "appnroll")
@@ -119,7 +119,7 @@ profiles=("default" "appnroll")
 then you can run
 
 ```shell
-zsh run_script_for_multiple_profiles.zsh
+zsh ec2_instances_in_multiple_profiles.zsh
 ```
 
 You can have an example config like this:
@@ -145,6 +145,22 @@ aws_secret_access_key = YOUR_PROFILE_1_SECRET_ACCESS_KEY_HERE
 aws_access_key_id = YOUR_PROFILE_2_KEY_HERE
 aws_secret_access_key = YOUR_PROFILE_2_SECRET_ACCESS_KEY_HERE
 ```
+
+
+## RDS instances
+
+There is an analogical script for RDS instances.
+If you have sufficient privileges run:
+
+```
+zsh aws_rds_instances_from_all_regions_to_db.zsh
+```
+
+and for multiple profiles:
+```
+zsh rds_instances_in_multiple_profiles.zsh
+```
+
 
 ## Contributing
 

@@ -4,6 +4,8 @@
 
 -- Dumped from database version 11.1
 -- Dumped by pg_dump version 11.1
+-- run:
+-- psql aws_instances -f sql/aws_rds_instances.sql
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -20,21 +22,17 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 
-CREATE TABLE public.aws_instances (
+CREATE TABLE public.aws_rds (
     id serial PRIMARY KEY,
-    instance_id VARCHAR (32) UNIQUE,
-    state VARCHAR (32),
-    name VARCHAR (32),
-    type VARCHAR (32),
-    public_ip VARCHAR (32),
+    dbi_resource_id VARCHAR (32) UNIQUE,
+    instance_class VARCHAR (32),
+    identifier VARCHAR (32),
     region VARCHAR (32),
-    profile VARCHAR (32),
-    launch_time VARCHAR (32),
-    publicdnsname VARCHAR (64)
+    profile VARCHAR (32)
 );
 
 
-COPY public.aws_instances (state, name, type, instance_id, public_ip, region, profile, launch_time, publicdnsname) FROM stdin;
+COPY public.aws_rds (dbi_resource_id, instance_class, identifier, region, profile) FROM stdin;
 \.
 
 --
