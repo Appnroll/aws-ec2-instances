@@ -27,23 +27,32 @@ which you usually have installed anyway on your local environment.
 
 * We need at least PostgreSQL 9.5 as it supports `upsert` that is update on conflict. Commands `createdb` and `psql` come with it (not tested on Ubuntu, maybe it needs extension here).
 
-to install postgreSQL on Mac
+to install postgreSQL on Mac:
 
 ```shell
 brew install postgresql
 ```
 
+to install postgreSQL on Ubuntu:
+
+```shell
+sudo apt install postgresql postgresql-contrib
+```
+
 * The script assumes you have configured the AWS CLI
 https://aws.amazon.com/cli/
 
+to install AWS CLI on Mac:
 
 ```shell
 brew install awscli
 ```
 
+to install AWS CLI on Ubuntu:
+
+Follow this [guide](https://docs.aws.amazon.com/cli/latest/userguide/install-linux.html)
 
 * For the script to work you need have `jq` installed as we need the json output of aws-cli to be parsed
-
 
 to install jq on Mac
 
@@ -51,6 +60,13 @@ to install jq on Mac
 brew install jq
 
 ```
+
+to install jq on Ubuntu
+
+```shell
+sudo apt-get install jq
+```
+
 ### Usage
 
 0) make sure you have the preconditions above, then
@@ -66,12 +82,27 @@ git clone https://github.com/Appnroll/aws-ec2-instances.git
 cd aws-ec2-instances
 ```
 
-1) first create the database:
+1) If this is your first time with postgres, you'll have to create user first (if you have done it before go to step 2). You can do that by typing in your terminal:
+
+On Mac:
+```shell
+createuser $USERNAME
+```
+On Ubuntu:
+```shell
+sudo -u postgres createuser --superuser $USERNAME
+```
+
+Change $USERNAME to for example your system's username
+
+2) Create the database:
+
 ```shell
 createdb aws_instances
 ```
 
-2) then create the table from the script in sql folder:
+3) Create the table from the script in sql folder:
+
 ```shell
 psql aws_instances -f sql/aws_ec2_instances.sql
 ```
@@ -80,12 +111,12 @@ before you need to run it to create `aws_instances` database in postgres
 with table `aws_ec2` and fields as in the variable $SAVED_FIELDS.
 The naming of course you can change directly in `sql/aws_ec2_instances.sql`
 
-3) then run the script:
+4) Run the script:
 ```shell
 zsh aws_ec2_instances_from_all_regions_to_db.zsh $DATABASE $TABLE_NAME
 ```
 
-4) Bonus step! If all works fine you can repeat with multiple environments.
+5) Bonus step! If all works fine you can repeat with multiple environments.
 
 expect it to open a csv file with all the instances recorded to the database
 with the default program.
@@ -98,7 +129,7 @@ you can rerun this script for all future for updates
 
 ## Troubleshooting
 
-you may get `Failed to parse JSON, or got false/null`
+1. You may get `Failed to parse JSON, or got false/null`
 This means you probably don't have `jq` installed.
 
 
