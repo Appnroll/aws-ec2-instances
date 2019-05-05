@@ -1,0 +1,149 @@
+{
+    "instances": [
+        {
+            "name": "Instance-one-name",
+            "arn": "arn:aws:lightsail:us-west-2:424242424242:Instance/05bb556d-4242-4242-4242-4a7df21cbf13",
+            "supportCode": "4a7df21cbf13/i-f15751ec638105092",
+            "createdAt": 1518641476.071,
+            "location": {
+                "availabilityZone": "us-west-2a",
+                "regionName": "us-west-2"
+            },
+            "resourceType": "Instance",
+            "tags": [],
+            "blueprintId": "wordpress_4_9_2_1",
+            "blueprintName": "WordPress",
+            "bundleId": "micro_1_0",
+            "isStaticIp": false,
+            "privateIpAddress": "111.42.4.22",
+            "hardware": {
+                "cpuCount": 1,
+                "disks": [
+                    {
+                        "createdAt": 1518641476.071,
+                        "sizeInGb": 30,
+                        "isSystemDisk": true,
+                        "iops": 100,
+                        "path": "/dev/sda1",
+                        "attachedTo": "something-attached-to",
+                        "attachmentState": "attached"
+                    }
+                ],
+                "ramSizeInGb": 1.0
+            },
+            "networking": {
+                "monthlyTransfer": {
+                    "gbPerMonthAllocated": 2048
+                },
+                "ports": [
+                    {
+                        "fromPort": 80,
+                        "toPort": 80,
+                        "protocol": "tcp",
+                        "accessFrom": "Anywhere (0.0.0.0/0)",
+                        "accessType": "public",
+                        "commonName": "",
+                        "accessDirection": "inbound"
+                    },
+                    {
+                        "fromPort": 22,
+                        "toPort": 22,
+                        "protocol": "tcp",
+                        "accessFrom": "Anywhere (0.0.0.0/0)",
+                        "accessType": "public",
+                        "commonName": "",
+                        "accessDirection": "inbound"
+                    },
+                    {
+                        "fromPort": 443,
+                        "toPort": 443,
+                        "protocol": "tcp",
+                        "accessFrom": "Anywhere (0.0.0.0/0)",
+                        "accessType": "public",
+                        "commonName": "",
+                        "accessDirection": "inbound"
+                    }
+                ]
+            },
+            "state": {
+                "code": 80,
+                "name": "stopped"
+            },
+            "username": "bitnami",
+            "sshKeyName": "LightsailSshKeyName"
+        },
+        {
+            "name": "Instance-two-name",
+            "arn": "arn:aws:lightsail:us-west-2:424242424242:Instance/0b825eab-4242-4242-4242-d0a8060ff942",
+            "supportCode": "4a7df21cbf13/i-f15751ec638105093",
+            "createdAt": 1504728472.84,
+            "location": {
+                "availabilityZone": "us-west-2a",
+                "regionName": "us-west-2"
+            },
+            "resourceType": "Instance",
+            "tags": [],
+            "blueprintId": "wordpress_4_8_0",
+            "blueprintName": "WordPress",
+            "bundleId": "micro_1_0",
+            "isStaticIp": false,
+            "privateIpAddress": "172.26.6.424",
+            "publicIpAddress": "42.424.42.424",
+            "hardware": {
+                "cpuCount": 1,
+                "disks": [
+                    {
+                        "createdAt": 1504728472.84,
+                        "sizeInGb": 30,
+                        "isSystemDisk": true,
+                        "iops": 100,
+                        "path": "/dev/sda1",
+                        "attachedTo": "somthing-attached-to-1",
+                        "attachmentState": "attached"
+                    }
+                ],
+                "ramSizeInGb": 1.0
+            },
+            "networking": {
+                "monthlyTransfer": {
+                    "gbPerMonthAllocated": 2048
+                },
+                "ports": [
+                    {
+                        "fromPort": 80,
+                        "toPort": 80,
+                        "protocol": "tcp",
+                        "accessFrom": "Anywhere (0.0.0.0/0)",
+                        "accessType": "public",
+                        "commonName": "",
+                        "accessDirection": "inbound"
+                    },
+                    {
+                        "fromPort": 22,
+                        "toPort": 22,
+                        "protocol": "tcp",
+                        "accessFrom": "Anywhere (0.0.0.0/0)",
+                        "accessType": "public",
+                        "commonName": "",
+                        "accessDirection": "inbound"
+                    },
+                    {
+                        "fromPort": 443,
+                        "toPort": 443,
+                        "protocol": "tcp",
+                        "accessFrom": "Anywhere (0.0.0.0/0)",
+                        "accessType": "public",
+                        "commonName": "",
+                        "accessDirection": "inbound"
+                    }
+                ]
+            },
+            "state": {
+                "code": 16,
+                "name": "running"
+            },
+            "username": "bitnami",
+            "sshKeyName": "LightsailSshKeyName"
+        }
+    ]
+}
