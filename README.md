@@ -194,6 +194,20 @@ zsh rds_instances_in_multiple_profiles.zsh
 ```
 
 
+## Lightsail instances
+
+You can also check on your lightsail instances. If you have sufficient privileges run:
+
+```
+zsh aws_lightsail_instances_from_all_regions_to_db.zsh
+```
+
+and for multiple profiles:
+
+```
+zsh lightsail_instances_in_multiple_profiles.zsh
+```
+
 ## Contributing
 
 You are welcome to add issues and create pull requests.
